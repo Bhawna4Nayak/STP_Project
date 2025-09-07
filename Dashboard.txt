@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>STP Dashboard (AI & IoT)</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; padding: 20px; }
+    .container { max-width: 900px; margin: auto; background: white; padding: 20px; border-radius: 8px; }
+    h1, h2 { color: #2c3e50; }
+    .metrics { display: flex; justify-content: space-between; margin-bottom: 20px; }
+    .metric { background: #ecf0f1; padding: 15px; border-radius: 8px; width: 30%; text-align: center; }
+    .alerts { background: #ffeaa7; padding: 10px; border-left: 5px solid #e17055; margin-bottom: 10px; }
+    .chart img { width: 100%; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AI & IoT Sewage Treatment Dashboard</h1>
+    <h2>Real-Time Metrics</h2>
+    <div class="metrics">
+      <div class="metric"><strong>pH</strong><br>7.2</div>
+      <div class="metric"><strong>BOD (Predicted)</strong><br>20 mg/L</div>
+      <div class="metric"><strong>Turbidity</strong><br>15 NTU</div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><strong>Flow Rate</strong><br>1200 L/hr</div>
+      <div class="metric"><strong>DO</strong><br>6.5 mg/L</div>
+      <div class="metric"><strong>Temperature</strong><br>28°C</div>
+    </div>
+
+    <h2>Predicted BOD Trend</h2>
+    <div class="chart">
+      <img src="https://quickchart.io/chart?c={type:'line',data:{labels:['10:00','11:00','12:00','13:00'],datasets:[{label:'BOD',data:[18,20,21,23]}]}}">
+    </div>
+
+    <h2>Alerts</h2>
+    <div class="alerts">[10:15] Alert: Sudden spike in turbidity above 25 NTU</div>
+    <div class="alerts">[11:05] Warning: DO dropped below threshold</div>
+  </div>
+</body>
+</html>
